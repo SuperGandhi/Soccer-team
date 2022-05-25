@@ -1,8 +1,13 @@
 import React from 'react'
+import Headlines from './Headlines'
+import Substitutes from './Substitutes'
 
 const TeamSelect = () => {
   return (
-    <div>TeamSelect</div>
+    <section>
+        <Headlines/>
+        <Substitutes/>
+    </section>
   )
 }
 
