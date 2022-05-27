@@ -8,7 +8,7 @@ const Substitutes = ({substitutes}) => {
             <div className='substitutes'>
                 {
                     substitutes?.map(p=>(
-                        <article className='substitute'>
+                        <article className='substitute' key={p.id}>
                             <div>
                                 <img src={p.pic} alt={p.name} />
                                 <button>X</button>
