@@ -64,6 +64,13 @@ const initialState = {
 
 
 const reducerCouch = (state=initialState, action)=>{
+    if(action.type === 'ADD_HEADLINE'){
+        return{
+            ...state,
+            headlines: state.headlines.concat(action.player),
+            players: state.players.filter(p=>p.id !== action.player.id)
+        }
+    }
     return state;
 }
 
