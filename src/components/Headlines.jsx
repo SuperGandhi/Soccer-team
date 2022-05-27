@@ -8,7 +8,7 @@ const Headlines = ({headlines}) => {
         <div className='stadium'>
             {
                 headlines?.map(p=>(
-                    <article className='headline'>
+                    <article className='headline' key={p.id}>
                         <div>
                             <img src={p.pic} alt={p.name} />
                             <button>X</button>
