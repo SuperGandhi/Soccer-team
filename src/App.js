@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
 import Players from './components/Players';
 import TeamSelect from './components/TeamSelect';
 import store from './store'
-
+import "./styles/styles.scss"
 
 
 const App = () => {
