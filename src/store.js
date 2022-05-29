@@ -71,6 +71,13 @@ const reducerCouch = (state=initialState, action)=>{
             players: state.players.filter(p=>p.id !== action.player.id)
         }
     }
+    if(action.type === 'ADD_SUBTITUTE'){
+        return {
+            ...state,
+            subtitutes: state.subtitutes.concat(action.player),
+            players: state.players.filter(p=>p.id !== action.player.id)
+        }
+    }
     return state;
 }
 
