@@ -78,6 +78,14 @@ const reducerCouch = (state=initialState, action)=>{
             players: state.players.filter(p=>p.id !== action.player.id)
         }
     }
+
+    if(action.type === 'QUIT_HEADLINE'){
+        return {
+            ...state,
+            headlines: state.headlines.filter(p=>p.id !== action.player.id),
+            players: state.players.concat(action.player)
+        }
+    }
     return state;
 }
 
