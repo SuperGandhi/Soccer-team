@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 
-const Players = ({players, addHeadline}) => {
+const Players = ({players, addHeadline, addSubtitute}) => {
   return (
     <section>
       <h2>Players</h2>
@@ -14,7 +14,7 @@ const Players = ({players, addHeadline}) => {
                 <h3>{p.name}</h3>
                 <div>
                   <button onClick={() => addHeadline(p)}>Headline</button>
-                  <button>Subtitute</button>
+                  <button onClick={()=> addSubtitute(p)}>Subtitute</button>
                 </div>
               </article>
           ))
@@ -33,6 +33,12 @@ const mapDispatchToProps = dispatch => ({
   addHeadline(player){
     dispatch({
       type: 'ADD_HEADLINE',
+      player
+    })
+  },
+  addSubtitute(player){
+    dispatch({
+      type: 'ADD_SUBTITUTE',
       player
     })
   }
