@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux/es/exports'
-
+import stadium from "../stadium.jpg"
 const Headlines = ({headlines, quitHeadline}) => {
   return (
     <section>
@@ -17,6 +17,7 @@ const Headlines = ({headlines, quitHeadline}) => {
                     </article>
                 ))
             }
+            <img src={stadium} alt="stadium-soccer"/>
         </div>
     </section>
   )
